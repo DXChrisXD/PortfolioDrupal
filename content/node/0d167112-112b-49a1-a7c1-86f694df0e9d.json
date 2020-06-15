@@ -1,0 +1,213 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/node\/7?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/regular"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field__atras": [
+            {
+                "href": "http:\/\/default\/node\/6?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field_imagen": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Pasatiempos_0.png"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field_seguir_": [
+            {
+                "href": "http:\/\/default\/node\/8?_format=hal_json"
+            }
+        ]
+    },
+    "uuid": [
+        {
+            "value": "0d167112-112b-49a1-a7c1-86f694df0e9d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "regular"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2020-06-15T18:51:58+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "67ac2c6c-d3d2-4e5b-bc73-9c5fae5051cf"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "67ac2c6c-d3d2-4e5b-bc73-9c5fae5051cf"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field__atras": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/node\/6?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/trabajos_destacados"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6a28218d-d79f-4f14-8314-86a1b4a2cb95"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field_imagen": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Pasatiempos_0.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "9a5d93b0-f858-42f8-a80a-d6967cac1df5"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field_seguir_": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/node\/8?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/habilidades"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a5eeee9b-6a57-4d1f-9b91-f8e05524b42e"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Pasatiempos",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-06-15T18:44:39+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-06-15T18:51:58+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Entre los principales que tengo es jugar videojuegos y el mundo de la computaci\u00f3n.<\/p>\r\n\r\n<p>Desde que tengo 3 a\u00f1os he jugado en la computadora, empezando desde ms-dos jugando Doom, Wolfenstein 3D, Heretic; luego llegando el Playstation 1 para probar un genero que me dej\u00f3 con mucha melancolia, el Car-Combat por titulos como Twisted Metal 1, 2, 3, 4; Vigilante 8 2nd Offense y Rogue Trip. de ah\u00ed regres\u00e9 a la computadora para jugar juegos como Unreal Gold, Unreal Tournament, Half-life 1, Starcraft, Warcraft 3, Age of Empires 2 y varios juegos flash. Actualmente lo que m\u00e1s juego es Dota 2, lo que es curioso, porque no me gusta el genero de estrateg\u00eda, sino m\u00e1s los First Person Shooters.<\/p>\r\n\r\n<p>Series no veo, no s\u00e9, pero no puedo, siento una impotencia al tener que ver que hacen los personajes y no poder intervenir.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Entre los principales que tengo es jugar videojuegos y el mundo de la computaci\u00f3n.<\/p>\n\n<p>Desde que tengo 3 a\u00f1os he jugado en la computadora, empezando desde ms-dos jugando Doom, Wolfenstein 3D, Heretic; luego llegando el Playstation 1 para probar un genero que me dej\u00f3 con mucha melancolia, el Car-Combat por titulos como Twisted Metal 1, 2, 3, 4; Vigilante 8 2nd Offense y Rogue Trip. de ah\u00ed regres\u00e9 a la computadora para jugar juegos como Unreal Gold, Unreal Tournament, Half-life 1, Starcraft, Warcraft 3, Age of Empires 2 y varios juegos flash. Actualmente lo que m\u00e1s juego es Dota 2, lo que es curioso, porque no me gusta el genero de estrateg\u00eda, sino m\u00e1s los First Person Shooters.<\/p>\n\n<p>Series no veo, no s\u00e9, pero no puedo, siento una impotencia al tener que ver que hacen los personajes y no poder intervenir.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

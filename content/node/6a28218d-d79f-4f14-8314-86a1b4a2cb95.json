@@ -1,0 +1,411 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/node\/6?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/trabajos_destacados"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_atras_trabajos": [
+            {
+                "href": "http:\/\/default\/node\/5?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_imagen1": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/carro_canvas_0.jpg"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_imagen2": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/trip8_0.png"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_imagen3": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Countash_0.png"
+            },
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Countash_wires_0.png"
+            },
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/countash_comparison_1.png"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_imagen4": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Screenshot_20200522-115444_0.png"
+            },
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Screenshot_20200522-115440_0.png"
+            },
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Screenshot_20200522-115507_0.png"
+            },
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Screenshot_20200522-115456_0.png"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_portada": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Trabajos_0.png"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_se": [
+            {
+                "href": "http:\/\/default\/node\/7?_format=hal_json"
+            }
+        ]
+    },
+    "uuid": [
+        {
+            "value": "6a28218d-d79f-4f14-8314-86a1b4a2cb95"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "trabajos_destacados"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2020-06-15T18:49:07+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "67ac2c6c-d3d2-4e5b-bc73-9c5fae5051cf"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "67ac2c6c-d3d2-4e5b-bc73-9c5fae5051cf"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_atras_trabajos": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/node\/5?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/regular"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c6f8709b-4992-470e-ab53-caed604faab9"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_imagen1": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/carro_canvas_0.jpg"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a93566c4-6c14-4feb-a4d5-725f988a8528"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_imagen2": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/trip8_0.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ec916516-3583-4c86-a088-bba41e8bdd7c"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_imagen3": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Countash_0.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cea70d12-761c-4121-898f-8a84ae1b796d"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Countash_wires_0.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "1cf6eb15-d7ab-443f-a73a-1d83f03472d6"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/countash_comparison_1.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ec76a158-fa4d-4657-8aa6-64c5f78615e2"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_imagen4": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Screenshot_20200522-115444_0.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ee0c8d16-a1c5-45c8-a988-993312c869c2"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Screenshot_20200522-115440_0.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "971d60ac-135f-42f4-8ace-e2a981fdbbb7"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Screenshot_20200522-115507_0.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "26715e39-7928-41e0-8306-b108c9d26504"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Screenshot_20200522-115456_0.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4d76829c-f8e9-40d3-8928-10517815b43e"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_portada": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Trabajos_0.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4590fb8b-3562-4aa0-8615-895a0818b566"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/trabajos_destacados\/field_se": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/node\/7?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/regular"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "0d167112-112b-49a1-a7c1-86f694df0e9d"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Trabajos Destacados",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-06-15T18:36:42+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-06-15T18:49:07+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>De mis trabajos destacados puedo mencionar cuatro que he realizado<\/p>\r\n\r\n<p>son:<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>De mis trabajos destacados puedo mencionar cuatro que he realizado<\/p>\n\n<p>son:<\/p>\n\n<p>\u00a0<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_titulo1": [
+        {
+            "value": "Un carro dibujado con Canvas"
+        }
+    ],
+    "field_titulo2": [
+        {
+            "value": "Trip 8, un juego hecho en Java"
+        }
+    ],
+    "field_titulo3_trabajos": [
+        {
+            "value": "Countash realista en vectores"
+        }
+    ],
+    "field_titulo4": [
+        {
+            "value": "FireDodge, mi primer juego para android hecho en libgdx"
+        }
+    ]
+}

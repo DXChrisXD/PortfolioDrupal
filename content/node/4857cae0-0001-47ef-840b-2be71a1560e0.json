@@ -1,0 +1,213 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/node\/4?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/regular"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field__atras": [
+            {
+                "href": "http:\/\/default\/node\/3?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field_imagen": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Lenguajes_0.png"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field_seguir_": [
+            {
+                "href": "http:\/\/default\/node\/5?_format=hal_json"
+            }
+        ]
+    },
+    "uuid": [
+        {
+            "value": "4857cae0-0001-47ef-840b-2be71a1560e0"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "regular"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2020-06-15T18:29:44+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "67ac2c6c-d3d2-4e5b-bc73-9c5fae5051cf"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "67ac2c6c-d3d2-4e5b-bc73-9c5fae5051cf"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field__atras": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/node\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/regular"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "22dcd9e7-42b4-4f6e-b0c0-ef208a5b3f82"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field_imagen": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2020-06\/Lenguajes_0.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "53ee1b71-e68e-4a14-b0e2-18701be5aa04"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/regular\/field_seguir_": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/node\/5?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/regular"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c6f8709b-4992-470e-ab53-caed604faab9"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Lenguajes de programaci\u00f3n",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-06-15T18:24:28+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-06-15T18:29:44+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>A lo largo de mi viaje he adquirido ciertas habilidades o entendimientos con los lenguajes JAVA, HTML, javascript y css. En un principio todo era java, ya que los primeros cursos de la carrera estaban planteados con este lenguaje, pero luego se tom\u00f3 un rumbo a lo web, cambiando java por html, css y javascript (y un poco de php). Conozco otros lenguajes, pero no estoy tan experimentado con ellos.<\/p>\r\n\r\n<p>Otros lenguajes que he usado poco son php, mysql y ruby (este fue por una prueba).<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>A lo largo de mi viaje he adquirido ciertas habilidades o entendimientos con los lenguajes JAVA, HTML, javascript y css. En un principio todo era java, ya que los primeros cursos de la carrera estaban planteados con este lenguaje, pero luego se tom\u00f3 un rumbo a lo web, cambiando java por html, css y javascript (y un poco de php). Conozco otros lenguajes, pero no estoy tan experimentado con ellos.<\/p>\n\n<p>Otros lenguajes que he usado poco son php, mysql y ruby (este fue por una prueba).<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}
