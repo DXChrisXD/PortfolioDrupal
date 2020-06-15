@@ -1,0 +1,248 @@
+// Menus
+
+$menu-text-color: $primary-text-color;
+$submenu-bg-color: #515151;
+$submenu-bg-color-mobile: rgba($white, .1);
+$submenu-text-color: $white;
+
+.menu {
+  list-style: none;
+  padding-left: 0;
+}
+
+// Every menu link.
+.menu-link {
+  color: $submenu-text-color;
+  display: block;
+  padding: .5rem .75rem;
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:hover:visited {
+    color: darken($submenu-text-color, 25%);
+  }
+
+  &:visited{
+    color: $submenu-text-color;
+  }
+}
+
+// Every menu item that has a child menu.
+.menu-item--has-child {
+  position: relative;
+
+  > .menu-link {
+    padding-right: rem(32);
+  }
+}
+
+//
+// First level menu items.
+//
+
+.menu--first-level {
+  background-color: $gray25;
+
+  // Set inline menu on big screens.
+  @include mappy-query(b-medium) {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+  }
+
+  > .menu-item {
+    @include mappy-query(b-medium) {
+      flex-shrink: 1;
+    }
+
+    > .menu-link {
+      @include mappy-query(b-medium) {
+        color: $secondary-text-color;
+        display: block;
+        padding: rem(5) rem(10);
+        text-decoration: none;
+
+        &:hover,
+        &:hover:visited{
+          color: $link-color;
+        }
+
+        &:visited{
+          color: $secondary-text-color;
+        }
+      }
+    }
+  }
+
+  // Add bottom arrow for the first element that has a submenu.
+  & > .has-submenu {
+    & > .menu-link {
+      @include mappy-query(b-medium) {
+        white-space: nowrap;
+
+        &:after {
+          @include triangle($secondary-text-color, bottom, 8px, 6px);
+          content: '';
+          display: inline-block;
+          margin-left: rem(5);
+          vertical-align: middle;
+        }
+
+        &:hover,
+        &:hover:visited{
+          &:after{
+            border-color: $link-color transparent transparent transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+// Submenus.
+//
+
+.submenu {
+  background-color: $submenu-bg-color-mobile;
+  list-style: none;
+  padding: 0;
+
+  @include mappy-query(b-medium) {
+    background-color: $submenu-bg-color;
+    border-radius: 3px;
+    max-width: rem(200);
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: 9999;
+    transition: top 250ms cubic-bezier(0.34,1.61,0.7,1);
+  }
+
+  // Submenu links.
+  .menu-link {
+    &:focus,
+    &:hover {
+      color: darken($submenu-text-color, 25%);
+    }
+
+    @include mappy-query(b-medium) {
+      @include text-overflow;
+    }
+  }
+
+  // 1st step deep submenu.
+  .submenu {
+    @include mappy-query(b-medium) {
+      left: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 9999;
+      transition: top 250ms cubic-bezier(0.34,1.61,0.7,1);
+    }
+  }
+
+  // Links that shows nested submenus.
+  .has-submenu {
+    & > .menu-link {
+      position: relative;
+
+      &:hover {
+        &:after {
+          @include mappy-query(b-medium) {
+            transform: translateX(2px);
+          }
+        }
+      }
+
+      @include mappy-query(b-medium) {
+        &:after {
+          @include triangle(#808080, bottom, 8px, 6px);
+          bottom: 0;
+          content: '';
+          display: block;
+          margin: auto;
+          position: absolute;
+          right: rem(10);
+          top: 0;
+          transition: all 250ms cubic-bezier(0.34,1.61,0.7,1);
+
+          @include mappy-query(b-medium) {
+            @include triangle(#808080, right, 6px, 8px);
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+// Display every submenus if js is disabled.
+// Avoid css flickering using modernizr .js class.
+//
+
+.js {
+  .submenu {
+    &[aria-hidden='true'] {
+      left: -9999px;
+      max-height: 0;
+      opacity: 0;
+      top: 110%;
+      visibility: hidden;
+    }
+
+    .submenu {
+      &[aria-hidden='true'] {
+        top: 10px;
+      }
+    }
+  }
+}
+
+//
+// Submenus toggle buttons.
+//
+
+$submenu-toggle-size: 24px;
+
+.submenu-toggle {
+  @include button-unstyled;
+  border: 2px solid $gray75;
+  border-radius: 50%;
+  color: $gray75;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  right: 4px;
+  top: 8px;
+  height: $submenu-toggle-size;
+  width: $submenu-toggle-size;
+  transition: none;
+
+  &:hover,
+  &:focus {
+    border-color: $white;
+    color: $white;
+  }
+
+  &:after {
+    content: "+";
+    font-size: 20px;
+    line-height: calc(#{$submenu-toggle-size} - 8px);
+    transition: none;
+  }
+
+  &.toggled{
+    border-color: $link-color;
+    color: $link-color;
+
+    &:after {
+      content: "-";
+    }
+  }
+
+  @include mappy-query(b-medium) {
+    display: none;
+  }
+}

@@ -1,0 +1,90 @@
+name: Hops
+type: theme
+base theme: stable
+description: A starter theme to brew according to your taste.
+package: Core
+core: 8.x
+
+libraries:
+  - hops/base
+
+libraries-override:
+  filter/drupal.filter:
+    css:
+      theme:
+        /core/themes/stable/css/filter/filter.admin.css: false
+
+  system/base:
+    css:
+      component:
+        /core/themes/stable/css/system/components/align.module.css: false
+        /core/themes/stable/css/system/components/clearfix.module.css: false
+        /core/themes/stable/css/system/components/container-inline.module.css: false
+        /core/themes/stable/css/system/components/details.module.css: false
+        /core/themes/stable/css/system/components/fieldgroup.module.css: false
+        /core/themes/stable/css/system/components/item-list.module.css: false
+        /core/themes/stable/css/system/components/js.module.css: false
+        /core/themes/stable/css/system/components/nowrap.module.css: false
+        /core/themes/stable/css/system/components/position-container.module.css: false
+        /core/themes/stable/css/system/components/progress.module.css: false
+        /core/themes/stable/css/system/components/reset-appearance.module.css: false
+        /core/themes/stable/css/system/components/resize.module.css: false
+        /core/themes/stable/css/system/components/system-status-counter.css: false
+        /core/themes/stable/css/system/components/system-status-report-counters.css: false
+        /core/themes/stable/css/system/components/system-status-report-general-info.css: false
+        /core/themes/stable/css/system/components/sticky-header.module.css: false
+        /core/themes/stable/css/system/components/tablesort.module.css: false
+        /core/themes/stable/css/system/components/tabledrag.module.css: false
+        /core/themes/stable/css/system/components/tree-child.module.css: false
+
+  core/drupal.vertical-tabs:
+    css:
+      component:
+        /core/themes/stable/css/core/vertical-tabs.css: false
+
+  views/views.module:
+    css:
+      component:
+        /core/themes/stable/css/views/views.module.css: false
+
+  user/drupal.user:
+    css:
+      component:
+        /core/themes/stable/css/user/user.module.css: false
+
+ckeditor_stylesheets:
+  - dist/css/base/base.css
+  - dist/css/components/ckeditor.css
+  - dist/css/components/system.css
+  - dist/css/components/global.css
+  - dist/css/components/components.css
+
+regions:
+  header: 'Site Header'
+  content_top: 'Content top'
+  content: 'Content'
+  content_aside: 'Content aside'
+  content_bottom: 'Content bottom'
+  footer: 'Footer'
+
+# Define custom namespaces with component libraries module
+# for cleaner inclusions in templates
+# It is used by hops.ui_patterns.yml for UI patterns module
+component-libraries:
+  atoms:
+    paths:
+      - src/styleguide/components/01-atoms
+  molecules:
+    paths:
+      - src/styleguide/components/02-molecules
+  organisms:
+    paths:
+      - src/styleguide/components/03-organisms
+  layouts:
+    paths:
+      - src/styleguide/components/04-layouts
+
+# Information added by Drupal.org packaging script on 2019-11-11
+version: '8.x-1.0-beta3'
+project: 'hops'
+datestamp: 1573506787

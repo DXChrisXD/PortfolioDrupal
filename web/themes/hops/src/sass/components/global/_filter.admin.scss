@@ -1,0 +1,68 @@
+// Admin styling for the Filter module.
+
+// Filter information under field.
+.text-format-wrapper > .form-item {
+  margin-bottom: 0;
+}
+
+.filter-wrapper {
+  border-radius: 3px;
+  border-top: 0;
+  border: 1px solid $border-color;
+  margin: 0;
+  overflow: hidden;
+  padding: rhythm(1/2) 1rem;
+
+  .form-item {
+    margin: 0;
+
+    label {
+      display: inline;
+    }
+  }
+}
+
+.filter-help {
+  float: right;
+}
+
+.filter-guidelines {
+  .filter-guidelines-item {
+    margin-top: rhythm(1);
+  }
+}
+
+.filter-help {
+  p {
+    margin: 0;
+  }
+
+  a {
+    position: relative;
+    margin: 0 1rem 0 0;
+
+    &:after {
+      @include el(block, 16px, 16px);
+      background: transparent url(../../images/core/help.png);
+      position: absolute;
+      right: - 1rem;
+      top: 0;
+    }
+  }
+}
+
+.text-format-wrapper {
+  .description {
+    margin-top: rhythm(1/2);
+  }
+}
+
+.tips {
+  font-size: $font-size-md;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  // Improve filter tips position.
+  padding-left: 0;
+}

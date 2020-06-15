@@ -1,0 +1,30 @@
+<hr class="fh5co-spacer fh5co-spacer-sm">
+<!-- Latest Project -->
+<div id="fh5co-latest-project">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<figure>
+					<img src="{{file_url(content.field_about_image['#items'].entity.uri.value)}}" alt="Image" class="img-responsive">
+				</figure>
+			</div>
+			<div class="col-md-3 col-md-push-1">
+				<section>
+					<h5 class="text-muted text-uppercase fh5co-no-margin-bottom fh5co-letter-space">
+						{{ content.field_sub_title.0 }}
+					</h5>
+					<br class="fh5co-spacer fh5co-spacer-xxs">
+					<h2 class="fh5co-heading-with-border">
+						<span class="fh5co-border"></span>{{ content.field_about_title.0 }}
+					</h2>
+					<p>
+						{{ content.field_content.0 }}
+					</p>
+					<p><a href="{{content.field_about_link.0['#url']}}" class="fh5co-link"><i class="fa fa-angle-right"></i> {{content.field_about_link.0['#title']}}</a></p>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Latest Project -->
+<hr class="fh5co-spacer fh5co-spacer-sm">

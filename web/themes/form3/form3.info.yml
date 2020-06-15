@@ -1,0 +1,32 @@
+name: Form3
+type: theme
+description: Form3 Sub Theme for the new Uikitty3 - customize to your hearts content!
+# core: 8.x
+base theme: uikitty3
+libraries:
+  - form3/default
+stylesheets-remove:
+  - '@classy/css/components/tabs.css'
+  - core/assets/vendor/normalize-css/normalize.css
+
+regions:
+  breadcrumb: 'Breadcrumb'
+  pagetitle: 'Page Title'
+  branding: 'Branding'
+  mainmenu: 'Mainmenu'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  slider: 'Slider'
+  tabs: 'Tabs'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  video_sidebar: 'Video Sidebar'
+  footer: 'Footer'
+  offcanvas: 'Off-canvas'
+
+# Information added by Drupal.org packaging script on 2017-02-16
+version: '8.x-3.2'
+core: '8.x'
+project: 'form3'
+datestamp: 1487203386

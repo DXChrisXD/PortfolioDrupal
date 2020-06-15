@@ -1,0 +1,52 @@
+uuid: b1b3021b-e8b6-4c48-8a72-0e0c91e10002
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.trabajos_destacados.body
+    - field.field.node.trabajos_destacados.field_atras_trabajos
+    - field.field.node.trabajos_destacados.field_imagen1
+    - field.field.node.trabajos_destacados.field_imagen2
+    - field.field.node.trabajos_destacados.field_imagen3
+    - field.field.node.trabajos_destacados.field_imagen4
+    - field.field.node.trabajos_destacados.field_portada
+    - field.field.node.trabajos_destacados.field_se
+    - field.field.node.trabajos_destacados.field_titulo1
+    - field.field.node.trabajos_destacados.field_titulo2
+    - field.field.node.trabajos_destacados.field_titulo3_trabajos
+    - field.field.node.trabajos_destacados.field_titulo4
+    - node.type.trabajos_destacados
+  module:
+    - text
+    - user
+id: node.trabajos_destacados.teaser
+targetEntityType: node
+bundle: trabajos_destacados
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_atras_trabajos: true
+  field_imagen1: true
+  field_imagen2: true
+  field_imagen3: true
+  field_imagen4: true
+  field_portada: true
+  field_se: true
+  field_titulo1: true
+  field_titulo2: true
+  field_titulo3_trabajos: true
+  field_titulo4: true

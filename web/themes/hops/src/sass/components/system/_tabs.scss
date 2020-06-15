@@ -1,0 +1,20 @@
+// Tabs
+//
+
+.tabs--primary {
+  @extend %nav--inline;
+  @extend %nav--tabs;
+
+  @media print {
+    display: none;
+  }
+}
+
+.tabs--secondary {
+  @extend %nav--inline;
+  @extend %nav--pillbox;
+
+  @media print {
+    display: none;
+  }
+}

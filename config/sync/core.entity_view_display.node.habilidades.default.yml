@@ -1,0 +1,71 @@
+uuid: c45db53b-8c5c-4b17-9c16-588b7c6cc6a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.habilidades.body
+    - field.field.node.habilidades.field_a
+    - field.field.node.habilidades.field_descripcion2
+    - field.field.node.habilidades.field_iconos
+    - field.field.node.habilidades.field_imagen_h
+    - field.field.node.habilidades.field_seguir_h
+    - node.type.habilidades
+  module:
+    - image
+    - text
+    - user
+id: node.habilidades.default
+targetEntityType: node
+bundle: habilidades
+mode: default
+content:
+  body:
+    label: visually_hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_a:
+    weight: 4
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_descripcion2:
+    weight: 3
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_iconos:
+    weight: 2
+    label: visually_hidden
+    settings:
+      image_style: iconos
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_imagen_h:
+    weight: 0
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_seguir_h:
+    weight: 5
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  links: true

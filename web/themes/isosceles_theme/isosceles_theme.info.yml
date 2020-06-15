@@ -1,0 +1,49 @@
+name: Isosceles Theme
+type: theme
+description: 'A flexible theme with many regions and a responsive layout.'
+package: core
+# core: 8.x
+
+#Libraries
+libraries:
+  - isosceles_theme/bootstrap-cdn
+  - isosceles_theme/global-components
+
+#Regions
+regions:
+  logo: 'Logo'
+  main_menu: 'Main Menu'
+  search: 'Search'
+  slider: 'Slider'
+  top_banner: 'Top Banner'
+  highlighted: 'Highlighted'
+  page_title: 'Page Title'
+  breadcrumb: 'Breadcrumb'
+  help: 'Help'
+  top_content_first: 'Top Content First'
+  top_content_second: 'Top Content Second'
+  top_content_third: 'Top Content Third'
+  top_content_fourth: 'Top Content Fourth'
+  sidebar_first: 'Left Sidebar'
+  content: 'Content'
+  sidebar_second: 'Right Sidebar'
+  bottom_content_first: 'Bottom Content First'
+  bottom_content_second: 'Bottom Content Second'
+  bottom_content_third: 'Bottom Content Third'
+  bottom_first: 'Bottom First'
+  bottom_second: 'Bottom Second'
+  bottom_third: 'Bottom Third'
+  bottom_fourth: 'Bottom Fourth'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  subfooter: 'Subfooter'
+
+# version: '8.x-1.1'
+# core: '8.x'
+
+# Information added by Drupal.org packaging script on 2018-09-20
+version: '8.x-1.1'
+core: '8.x'
+project: 'isosceles_theme'
+datestamp: 1537456580

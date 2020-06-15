@@ -1,0 +1,14 @@
+uuid: 1be3ea9d-5782-46e5-878f-2737d87e56eb
+name: Portfolio
+mail: christopher.top3@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

@@ -1,0 +1,19 @@
+uuid: 239d1290-501f-4c8c-b62e-177581e29ae0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo3_trabajos
+    - node.type.trabajos_destacados
+id: node.trabajos_destacados.field_titulo3_trabajos
+field_name: field_titulo3_trabajos
+entity_type: node
+bundle: trabajos_destacados
+label: titulo3
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

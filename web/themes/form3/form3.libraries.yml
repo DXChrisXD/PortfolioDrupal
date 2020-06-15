@@ -1,0 +1,14 @@
+default:
+  version: 1.x
+  css:
+    theme:
+      css/fonts.css: {}
+      css/app.css: {}
+  js:
+    js/app.js: {}
+    
+skrollr:
+  js:
+    js/skrollr.min.js: {}
+    js/skrollr.js: {}
+    

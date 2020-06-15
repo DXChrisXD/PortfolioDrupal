@@ -1,0 +1,352 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template in this directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - messages: Status and error messages. Should be displayed prominently.
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.logo: Items for the logo region.
+ * - page.main_menu: Items for the main menu region.
+ * - page.search: Items for the search region.
+ * - page.slider: Items for the slider region.
+ * - page.top_banner: Items for the top banner region.
+ * - page.highlighted: Items for the highlighted content region.
+ * - page.page_title: Items for the page title region.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ * - page.help: Dynamic help text, mostly for admin pages.
+ * - page.top_content_first: Items for the first top content region.
+ * - page.top_content_second: Items for the second top content region.
+ * - page.top_content_third: Items for the third top content region.
+ * - page.top_content_fourth: Items for the fourth top content region.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.bottom_content_first: Items for the first bottom content region.
+ * - page.bottom_content_second: Items for the second bottom content region.
+ * - page.bottom_content_third: Items for the third bottom content region.
+ * - page.bottom_first: Items for the first bottom region.
+ * - page.bottom_second: Items for the second bottom region.
+ * - page.bottom_third: Items for the third bottom region.
+ * - page.bottom_fourth: Items for the fourth bottom region.
+ * - page.footer_first: Items for the footer first region.
+ * - page.footer_second: Items for the footer Second region.
+ * - page.footer_third: Items for the footer third region.
+ * - page.subfooter: Items for the subfooter region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+<div class="layout-container  {{ sticky_on }}">
+  <header class="nav-header {{ sticky_header }}">
+    <div class="container">
+      <div class="row">
+        <!-- Logo -->
+        {% if page.main_menu %}
+        <div class="col-md-3 logo">
+            <div class="menu-ico">
+              <a href="#">
+                <i class="ionicons ion-navicon-round"></i>
+              </a>
+            </div>
+            {{ page.logo }}
+        </div>
+        {% endif %}
+        <!-- End Logo -->
+
+        <!-- Main Menu Navigation and Search -->
+        {% if page.main_menu and page.search %}
+        <nav class="col-md-9 navbar main-menu-search">
+          <div class="main-menu">
+            {{ page.main_menu }}
+          </div>
+          <div class="search">
+            {{ page.search }}
+          </div>
+        </nav>
+        {% endif %}
+        <!-- End Main Menu Navigation and Search -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Slider -->
+  {% if page.slider %}
+  <div class="slider">
+    {{ page.slider }}
+  </div>
+  {% endif %}
+  <!-- End Slider -->
+
+  <!-- Top Banner -->
+  {% if page.top_banner %}
+  <div class="top-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.top_banner }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <!-- End Top Banner -->
+
+  <!-- Highlighted -->
+  {% if page.highlighted is defined and page.highlighted|render|striptags|trim %}
+  <div class="highlighted">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.highlighted }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <!-- End Highlighted -->
+
+  <!-- Page Title -->
+  {% if not is_front and page.page_title %}
+  <div class="page-title">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.page_title }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <!-- End Page Title -->
+
+  <!-- Breadcrumb -->
+  {% if page.breadcrumb is defined and page.breadcrumb|render|striptags|trim %}
+  <div class="breadcrumb">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.breadcrumb }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <!-- End Breadcrumb -->
+
+  <!-- Help -->
+  {% if page.help is defined and page.help|render|striptags|trim %}
+  <div class="help">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.help }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <!-- End Help -->
+
+  <!-- Top Content Region -->
+  {% if page.top_content_first or page.top_content_second or page.top_content_third or page.top_content_fourth %}
+  <section class="top-content">
+    <div class="container">
+      <div class="row">
+        {% if page.top_content_first %}
+        <div class="{{ top_content_class }}">
+          {{ page.top_content_first }}
+        </div>
+        {% endif %}
+
+        {% if page.top_content_second %}
+        <div class="{{ top_content_class }}">
+          {{ page.top_content_second }}
+        </div>
+        {% endif %}
+
+        {% if page.top_content_third %}
+        <div class="{{ top_content_class }}">
+          {{ page.top_content_third }}
+        </div>
+        {% endif %}
+
+        {% if page.top_content_fourth %}
+        <div class="{{ top_content_class }}">
+          {{ page.top_content_fourth }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+  <!-- End Top Content Region -->
+
+  <!-- Main Content Region -->
+  <main role="main" class="main-content">
+    <div class="container">
+      <div class="row">
+        <!-- Sidebar First -->
+        {% if page.sidebar_first %}
+        <div class="{{ sidebar_first_class }}">
+          <aside class="sidebar sidebar-first" role="complementary">
+              {{ page.sidebar_first }}
+          </aside>
+        </div>
+        {% endif %}
+        <!-- End Sidebar First -->
+
+        <!-- Content -->
+        {% if page.content %}
+        <div class="{{ content_class }}">
+          <section class="layout-content">          
+            {{ page.content }}
+          </section>
+        </div>
+        {% endif %}
+        <!-- End Content -->
+
+        <!-- Sidebar Second -->
+        {% if page.sidebar_second %}
+        <div class="{{ sidebar_second_class }}">
+          <aside class="sidebar sidebar-second" role="complementary">
+            {{ page.sidebar_second }}
+          </aside>
+        </div>
+        {% endif %}
+        <!-- End Sidebar Second -->
+      </div>
+    </div>
+  </main>
+  <!-- End Main Content Region -->
+
+  <!-- Bottom Content Region -->
+  {% if page.bottom_content_first or page.bottom_content_second or page.bottom_content_third %}
+  <section class="bottom-content">
+    <div class="container">
+      <div class="row">
+        {% if page.bottom_content_first %}
+        <div class="{{ bottom_content_class }}">
+          {{ page.bottom_content_first }}
+        </div>
+        {% endif %}
+
+        {% if page.bottom_content_second %}
+        <div class="{{ bottom_content_class }}">
+          {{ page.bottom_content_second }}
+        </div>
+        {% endif %}
+
+        {% if page.bottom_content_third %}
+        <div class="{{ bottom_content_class }}">
+          {{ page.bottom_content_third }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+  <!-- End Bottom Content Region -->
+
+  <!-- Bottom Region -->
+  {% if page.bottom_first or page.bottom_second or page.bottom_third or page.bottom_fourth %}
+  <section class="bottom">
+    <div class="container">
+      <div class="row">
+        {% if page.bottom_first %}
+        <div class="{{ bottom_class }}">
+          {{ page.bottom_first }}
+        </div>
+        {% endif %}
+
+        {% if page.bottom_second %}
+        <div class="{{ bottom_class }}">
+          {{ page.bottom_second }}
+        </div>
+        {% endif %}
+
+        {% if page.bottom_third %}
+        <div class="{{ bottom_class }}">
+          {{ page.bottom_third }}
+        </div>
+        {% endif %}
+
+        {% if page.bottom_fourth %}
+        <div class="{{ bottom_class }}">
+          {{ page.bottom_fourth }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+  <!-- End Bottom Region -->
+
+  <!-- Footer -->
+  {% if page.footer_first or page.footer_second or page.footer_third %}
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        {% if page.footer_first %}
+        <div class="{{ footer_class }}">
+          {{ page.footer_first }}
+        </div>
+        {% endif %}
+
+        {% if page.footer_second %}
+        <div class="{{ footer_class }}">
+          {{ page.footer_second }}
+        </div>
+        {% endif %}
+
+        {% if page.footer_third %}
+        <div class="{{ footer_class }}">
+          {{ page.footer_third }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </footer>
+  {% endif %}
+  <!-- End Footer -->
+
+  <!-- Start Subfooter -->
+  {% if page.subfooter %}
+    <div class="subfooter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            {{ page.subfooter }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  <!-- End Subfooter -->
+
+<span class="top-page-arrow">Top</span>
+
+</div>{# /.layout-container #}

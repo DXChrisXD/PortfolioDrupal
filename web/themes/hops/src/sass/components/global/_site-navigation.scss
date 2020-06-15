@@ -1,0 +1,95 @@
+// Site navigation
+// ARIA hidden menu
+// @see http://edenspiekermann.github.io/a11y-toggle/
+
+// .site-navigation {}
+
+.collapsible-box {
+  max-height: 80em;
+  margin-bottom: 0;
+  // Allow transition back.
+  opacity: 1;
+  overflow: hidden;
+  visibility: visible;
+  transition: visibility 0s ease, max-height 300ms ease, opacity 300ms ease;
+  transition-delay: 0s;
+
+  @include mappy-query(b-medium) {
+    overflow: visible;
+  }
+}
+
+.js {
+  .collapsible-box {
+    &[aria-hidden='true']{
+      @include mappy-bp(max-width $b-medium-val) {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition-delay: 300ms, 0s, 0s;
+      }
+    }
+  }
+}
+
+.collapsible-box-toggle {
+  @include button-unstyled;
+  border-radius: 3px;
+  padding: 0;
+
+  &:focus{
+    background-color: $gray75;
+    outline: none;
+  }
+
+  @include mappy-query(b-medium) {
+    display: none;
+  }
+}
+
+// Hamburger icon.
+
+$icon-width: 27px;
+$icon-height: 20px;
+$bar-height: 2px;
+$icon-color: $black;
+
+.hamburger-icon {
+  display: block;
+  margin: $icon-width/4;
+  position: relative;
+  height: $icon-height;
+  width: $icon-width;
+
+  span {
+    background-color: $icon-color;
+    height: $bar-height;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  span:nth-child(2) {
+    top: $icon-height/2 - $bar-height/2;
+  }
+
+  span:last-child {
+    top: $icon-height - $bar-height;
+  }
+
+  [aria-expanded="true"] & {
+    span:first-child {
+      transform: rotate(-135deg) translate3d(-$icon-height/3, -$icon-height/3, 0);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+      transform: translate3d($icon-height/4, 0, 0);
+    }
+
+    span:last-child {
+      transform: rotate(135deg) translate3d(-$icon-height/3, $icon-height/3, 0);
+    }
+  }
+}

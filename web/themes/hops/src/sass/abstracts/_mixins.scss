@@ -1,0 +1,167 @@
+//
+// Mixins
+//
+// Snippets of reusable CSS to develop faster and keep code readable
+//
+
+// Use drupal hidden module classes to hide text
+// .hidden, .visually-hidden, .visually-hidden.focusable, .invisible
+// @see https://www.drupal.org/node/2022859
+
+// Triangle
+@mixin triangle($color: green, $orientation: top, $width: 10px, $height: 5px) {
+  border-style: solid;
+  height: 0;
+  width: 0;
+
+  @if $orientation == 'left' {
+    border-color: transparent $color transparent transparent;
+    border-width: $width/2 $height $width/2 0;
+  }
+  @else if $orientation == 'right' {
+    border-color: transparent transparent transparent $color;
+    border-width: $width/2 0 $width/2 $height;
+  }
+  @else if $orientation == 'top' {
+    border-color: transparent transparent $color transparent;
+    border-width: 0 $width/2 $height $width/2;
+  }
+  @else {
+    border-color: $color transparent transparent transparent;
+    border-width: $height $width/2 0 $width/2;
+  }
+}
+
+// Stripes background
+@mixin stripes($color1: red, $color2: blue, $angle: -45deg) {
+  background: repeating-linear-gradient(
+    $angle,
+    $color1,
+    $color1 10px,
+    $color2 10px,
+    $color2 20px
+  );
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Pseudo element
+// Create an empty css pseudo element. Reusable for, e.g., icons
+@mixin el($display, $width, $height) {
+  content: '';
+  display: $display;
+
+  @if $height {
+    height: $height;
+  }
+  @if $width {
+    width: $width;
+  }
+}
+
+// No child margin
+// Keep vrhthm consistent avoiding children margins
+// $direction : top or bottom. Default: bottom
+@mixin no-child-margin($direction : "bottom") {
+  $child : "last";
+
+  @if $direction == "top" {
+    $child : "first";
+  }
+
+  &>*:#{$child}-child {
+    margin-#{$direction}: 0;
+
+    &>*:#{$child}-child {
+      margin-#{$direction}: 0;
+
+      &>*:#{$child}-child {
+        margin-#{$direction}: 0;
+      }
+    }
+  }
+}
+
+// Buttons helpers
+//
+
+// Unstyled button
+@mixin button-unstyled($border: none, $background: transparent) {
+  appearance: none;
+  background: $background;
+  border: $border;
+  box-shadow: none;
+}
+
+// Define simple button styles
+@mixin button($font-size: 1rem) {
+  appearance: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $button-font-family;
+  font-size: $font-size;
+  font-weight: bold;
+  line-height: 1;
+  padding: rem(7px) $font-size rem(8px);
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+@mixin button--default($font-size: 1rem) {
+  @include button($font-size);
+  background-color: $button-bg-color;
+  border: 2px solid darken($button-bg-color, 8%);
+  color: $button-text-color;
+
+  &:visited {
+    color: $button-text-color;
+  }
+
+  &:hover {
+    background-color: darken($button-bg-color, 8%);
+    color: $button-text-color;
+  }
+
+  &:focus{
+    box-shadow: lighten($link-color, 15%) 0 0 5px;
+    color: $button-text-color;
+    outline: 0;
+  }
+}
+
+@mixin button--primary($font-size: $font-size-md) {
+  background-color: $button-prim-bg-color;
+  border: 2px solid darken($button-prim-bg-color, 8%);
+  color: $button-prim-text-color;
+
+  &:hover{
+    background-color: darken($button-prim-bg-color, 8%);
+    color: $button-prim-text-color;
+  }
+
+  &:focus {
+    box-shadow: lighten($link-color, 15%) 0 0 5px;
+    color: $button-prim-text-color;
+    outline: 0;
+  }
+}

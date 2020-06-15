@@ -1,0 +1,13 @@
+// Feed icon
+
+.feed-icon {
+  padding-left: rem(24px);
+  position: relative;
+
+  svg {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

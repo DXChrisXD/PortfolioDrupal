@@ -1,0 +1,15 @@
+features:
+  favicon: true
+logo:
+  path: 'themes/yg_relic/images/logo.png'
+  use_default: false
+favicon:
+  use_default: false
+  path: 'themes/yg_relic/images/logo.png'
+social_links_title: 'connect'
+facebook: 'https://www.facebook.com'
+twitter: 'https://www.twitter.com'
+googleplus: 'https://plus.google.com'
+instagram: 'https://www.instagram.com'
+linkedin: 'https://www.linkedin.com'
+github: 'https://github.com'

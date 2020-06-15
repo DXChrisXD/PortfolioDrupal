@@ -1,0 +1,51 @@
+// Fieldset, fieldgroup, form-composite
+// .fieldgroup : Provides a render element for a group of form elements.
+// In default rendering, the only difference between a 'fieldgroup' and a
+// 'fieldset' is the CSS class applied to the containing HTML element. Normally use a fieldset.
+// .form-composite : Provides a trait for radios, checkboxes, and similar composite form elements.
+
+fieldset {
+  position: relative;
+
+  &:not(.fieldgroup) {
+    border-radius: 3px;
+    border:1px solid $form-border-color;
+    margin: rhythm(1/2) 0 rhythm(1);
+    padding: rhythm(2) 1rem rhythm(1/2);
+
+    > legend {
+      .fieldset-legend {
+        color: $form-label-color;
+        text-transform: uppercase;
+        font-size: $font-size-md;
+        font-weight: bold;
+        letter-spacing: 0.06em;
+        left: 1rem;
+        top: rhythm(1/2);
+      }
+    }
+  }
+}
+
+.fieldgroup {
+  border: 0;
+  margin: rhythm(1) 0;
+  padding: rhythm(3/2) 0 0;
+  position: relative;
+}
+
+.fieldset-legend {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+// Checkboxes & radios
+.form-composite {
+  // Replicate .form-item__label styling
+  .fieldset-legend {
+    color: $form-label-color;
+    font-weight: bold;
+    font-family: $form-label-font;
+  }
+}

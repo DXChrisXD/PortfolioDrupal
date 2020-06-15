@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ path ~ '../../css/base/base.css' }}">
+  <link rel="stylesheet" href="{{ path ~ '../../css/layout/layout.css' }}">
+  <link rel="stylesheet" href="{{ path ~ '../../css/components/system.css' }}">
+  <link rel="stylesheet" href="{{ path ~ '../../css/components/global.css' }}">
+  <link rel="stylesheet" href="{{ path ~ '../../css/components/components.css' }}">
+  <link rel="stylesheet" href="{{ path ~ '../../css/state/state.css' }}">
+  <link rel="stylesheet" href="{{ path ~ '../../css/theme/theme.css' }}">
+  <link rel="stylesheet" href="{{ path ~ '../../css/styleguide.css' }}">
+  <title>Style guide</title>
+</head>
+<body>
+  <div class="site-container">
+    <main class="site-main" role="main" tabindex="-1">
+      <section class="site-content l-constrain">
+        {{ yield }}
+      </section>
+    </main>
+  </div>
+</body>
+</html>

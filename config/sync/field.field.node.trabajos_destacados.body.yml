@@ -1,0 +1,23 @@
+uuid: 475534cf-7069-4808-b048-1a0e063086f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.trabajos_destacados
+  module:
+    - text
+id: node.trabajos_destacados.body
+field_name: body
+entity_type: node
+bundle: trabajos_destacados
+label: descripción
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

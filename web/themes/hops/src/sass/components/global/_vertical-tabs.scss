@@ -1,0 +1,80 @@
+// Styles for vertical tabs.
+
+// Declined from D8 stable styles
+.vertical-tabs {
+  border: 1px solid $border-color;
+  margin: 1em 0 1em 15em;
+  border-radius: 3px;
+}
+
+.vertical-tabs__menu {
+  float: left;
+  list-style: none;
+  margin: -1px 0 -1px -15em;
+  padding: 0;
+  width: 15em;
+}
+
+.vertical-tabs__pane {
+  background-color: $white;
+  border: 0;
+  margin: 0;
+  padding: rhythm(1) 1rem 1px;
+
+  & > summary {
+    display: none;
+  }
+}
+
+// Layout of each tab.
+.vertical-tabs__menu-item {
+  border: 1px solid transparent;
+  font-size: $font-size-normal;
+
+  a {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    display: block;
+    padding: rhythm(1/2) 1rem;
+    text-decoration: none;
+
+    &:focus,
+    &:active,
+    &:hover {
+      .vertical-tabs__menu-item-title {
+        text-decoration: none;
+      }
+    }
+    &:focus {
+      outline: 1px dotted;
+    }
+    &:hover {
+      background-color: #ececec;
+    }
+  }
+
+  &.is-selected {
+    border: 1px solid $border-color;
+    border-right-width: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    a {
+      background-color: $white;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+    .vertical-tabs__menu-item-title {
+      color: $gray25;
+    }
+  }
+}
+
+.vertical-tabs__menu-item-summary {
+  display: block;
+  margin-bottom: 0;
+  line-height: normal;
+}

@@ -1,0 +1,18 @@
+uuid: 957904af-3e26-4afe-9e5a-6c9c4fce1949
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.regular
+id: node.regular.title
+field_name: title
+entity_type: node
+bundle: regular
+label: titulo
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 88a20a2b-fc4d-4e7a-bb1f-a1dd185a0529
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.regular
+  module:
+    - text
+id: node.regular.body
+field_name: body
+entity_type: node
+bundle: regular
+label: descripción
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

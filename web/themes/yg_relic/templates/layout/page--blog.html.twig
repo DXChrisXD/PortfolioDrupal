@@ -1,0 +1,145 @@
+
+    
+    <!-- Navigation -->
+    <div id="fh5co-main-nav-wrap">
+      <div class="fh5co-nav-overlay"></div>
+      <div class="fh5co-nav-inner">
+          {{ page.primary_menu }}
+          <ul class="fh5co-social">
+            <li><a href="{{facebook}}"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="{{twitter}}"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="{{instagram}}"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="{{linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+      </div>
+
+    </div>
+    <!-- Navigation -->
+
+    <!-- Header -->
+    <header id="fh5co-header" role="banner">
+       <a href="#" id="menu-btn" onclick="myFunction()" class="js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white"><i></i></a>
+    <div id="fh5co-logo" class="text-center">
+          {{ page.logo }}
+    </div>
+    </header>
+
+
+    <!-- Hero -->
+    <aside role="complementary" id="fh5co-hero" style="background-image: url({{ file_url(node.field_blog_image.entity.fileuri) }}
+);">
+      <div class="fh5co-bg-overlay"></div>
+      <div class="container">
+        <div class="fh5co-hero-text-wrap">
+          <div class="fh5co-hero-text">
+            <h1>{{node.label}}</h1>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Hero -->
+    {{page.edit}}
+    <!-- Main -->
+    <main role="main">
+      
+      <!-- Latest Project -->
+      <div id="fh5co-latest-project">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h5 class="text-muted text-uppercase fh5co-no-margin-bottom fh5co-letter-space">
+                  {{ node.label }}
+                </h5>
+                
+                <br class="fh5co-spacer fh5co-spacer-xxs">
+                <h2 class="fh5co-heading-with-border"><span class="fh5co-border"></span>{{ node.label }}</h2>
+                
+                <h5><span class="fh5co-blog-date">
+                  <i class="fa fa-user"></i> {{ node.Owner.name.value }}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <i class="fa fa-calendar"></i> {{ node.created.value|date("m.d.Y")  }}
+                 </span></h5>
+                  {{ node.body.value|raw }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Latest Project -->
+      <hr class="fh5co-spacer fh5co-spacer-sm">
+    
+
+    </main>
+    <!-- Main -->
+
+  {% if node.field_node_join_us.entity.field_join_us_title.value %}
+        <!-- Call to action -->
+      <div class="fh5co-call-to-action" style="background-image: url({{file_url(node.field_node_join_us.entity.field_join_us_background_image.entity.uri.value)}}); background-position: center center;">
+        <div class="fh5co-overlay">
+        </div>
+
+
+        <div class="container">
+          <div class="fh5co-call-to-action-wrap">
+            <div class="fh5co-call-to-action-inner text-center">
+              <h3 class="fh5co-call-to-action-text">{{ node.field_node_join_us.entity.field_join_us_title.value }}</h3>
+                <a href="{{ node.field_node_join_us.entity.field_button_link.get(0).url }}" class="btn btn-primary btn-lg">
+                  {{ node.field_node_join_us.entity.field_button_link.get(0).title  }}
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- Call to action -->
+  {% endif %}
+    <!-- FOOTER SECTION-->
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            {{ page.footer_col_1 }}
+          </div>
+          <div class="col-md-3">
+            {{ page.footer_col_2 }}
+          </div>
+          <div class="col-md-3">
+            {{ page.footer_col_3 }}
+          </div>          
+          <div class="col-md-3">
+            <h2 class="fh5co-footer-title">{{social_links_title}}</h2>
+            <ul class="fh5co-footer-links">
+              <li><a href="{{twitter}}" class="fh5co-link"><i class="fa fa-twitter"></i>&nbsp;&nbsp;Twitter</a></li>
+              <li><a href="{{facebook}}" class="fh5co-link"><i class="fa fa-facebook-square"></i>&nbsp;&nbsp;Facebook</a></li>
+              <li><a href="{{github}}" class="fh5co-link"><i class="fa fa-github"></i>&nbsp;&nbsp;Github</a></li>
+              <li><a href="{{linkedin}}" class="fh5co-link"><i class="fa fa-linkedin-square"></i>&nbsp;&nbsp;LinkedIn</a></li>
+              <li><a href="{{googleplus}}" class="fh5co-link"><i class="fa fa-google"></i>&nbsp;&nbsp;Google Plus</a></li>
+            </ul>
+          </div> 
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="fh5co-copyright">
+              <div class="col-md-6">
+                <div>
+                  &copy; YG Relic 2018. All Rights Reserved.  Lovely crafted by 
+                  <a href="http://freehtml5.co" target="_blank">FREEHTML5.co</a>
+                </div>
+                <div>
+                    Theme By<a href="https://www.drupaldevelopersstudio.com"  target="_blank"> Drupal Developers Studio</a>, A Division of <a href="https://www.youngglobes.com"  target="_blank">Young Globes</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <ul class="pull-right fh5co-footer-social">
+                  <li><a href="{{facebook}}"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="{{twitter}}"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="{{instagram}}"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="{{linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+<!-- END FOOTER SECTION -->
+
+ <!-- Go To Top -->
+    <a href="#" class="fh5co-gotop"><i class="ti-angle-up"></i></a>

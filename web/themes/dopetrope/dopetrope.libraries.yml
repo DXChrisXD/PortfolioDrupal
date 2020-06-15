@@ -1,0 +1,44 @@
+# The [theme name].libraries.yml defines all the libraries used by the theme.
+# Libraries are defined here, but are not included in your site until they are
+# added in the theme's info file, in a template using attach_library(), or by
+# some other programmatic means.
+
+# Each library must have a unique name within the module or theme defining it.
+# For example, every module can define a library named 'global-styling,' but
+# each module can only have one library with that name. The libraries will be
+# referenced using the theme name and library name together.
+#
+# dopetrope/global-styling
+# dopetrope/global-scripts
+
+# Libraries can have any name, but it is common to define one named
+# 'global-styling' which provides the CSS that is loaded on every page.
+global-styling:
+  version: '1.0.x'
+  # This is where you define CSS files. The CSS files conceptually use SMACSS
+  # categories. See https://smacss.com/. There are 5 categories, processed in
+  # this order:
+  # - base
+  # - layout
+  # - component (In SMACSS this is normally where 'module' goes.)
+  # - state
+  # - theme
+  #
+  # It is important to note that load order of CSS files is based on the
+  # category, but all themes are kept together as one large group, and seperate
+  # from module CSS. Module CSS is also loaded based on SMACSS categories, but
+  # loaded first. This ensures that all module CSS comes before theme CSS.
+  css:
+    # The SMACSS category.
+    base:
+      css/elements.css: {}
+
+global-scripts:
+  version: '1.0.x'
+  js:
+    js/jquery.min.js: {}
+    js/jquery.dropotron.min.js: {}
+    js/browser.min.js: {}
+    js/breakpoints.min.js: {}
+    js/util.js: {}
+    js/main.js: {}

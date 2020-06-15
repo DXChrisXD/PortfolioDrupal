@@ -1,0 +1,23 @@
+uuid: b96bf530-c012-4d79-8b21-6d4538d7a9e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion2
+    - node.type.habilidades
+  module:
+    - text
+id: node.habilidades.field_descripcion2
+field_name: field_descripcion2
+entity_type: node
+bundle: habilidades
+label: descripcion2
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

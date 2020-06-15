@@ -1,0 +1,70 @@
+// User module overrides
+// Password strength indicator.
+
+.form-type-password-confirm {
+  border-radius: 3px;
+  border:1px solid $form-border-color;
+  margin: rhythm(1/2) 0 rhythm(1);
+  padding: rhythm(1/2) 1rem;
+}
+
+.password-strength {
+  line-height: 2;
+}
+
+.password-strength__meter {
+  background-color: $gray75;
+  border-radius: 3px;
+  height: 8px;
+  margin-top: rhythm(1/3);
+  overflow: hidden;
+}
+
+.password-strength__indicator {
+  height: 100%;
+  width: 0;
+  transition: all 250ms $ease-out-quad;
+
+  &.is-weak {
+    background: red;
+  }
+  &.is-fair {
+    background: orange;
+  }
+  &.is-good {
+    background: yellow;
+  }
+  &.is-strong {
+    background: green;
+  }
+}
+
+.password-strength__title {
+  color: $secondary-text-color;
+  font-size: $font-size-md;
+  line-height: 1.3;
+  margin-top: rhythm(1/3);
+}
+
+.password-strength__text {
+  font-weight: bold;
+}
+
+div.password-confirm {
+  color: $secondary-text-color;
+  font-size: $font-size-md;
+  line-height: 1.3;
+  margin-top: rhythm(1/3);
+
+  span {
+    font-weight: bold;
+
+    &.error {
+      color: $error-color;
+    }
+  }
+}
+
+.password-confirm-match {
+  visibility: hidden;
+}

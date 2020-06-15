@@ -1,0 +1,253 @@
+{#
+/**
+ * @file
+ * Form3 theme implementation to display the front page.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the header region.
+ * - page.highlighted: Items for the highlighted region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.featured_top: Items for the featured top region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.featured_bottom_first: Items for the first featured bottom region.
+ * - page.featured_bottom_second: Items for the second featured bottom region.
+ * - page.featured_bottom_third: Items for the third featured bottom region.
+ * - page.footer_first: Items for the first footer column.
+ * - page.footer_second: Items for the second footer column.
+ * - page.footer_third: Items for the third footer column.
+ * - page.footer_fourth: Items for the fourth footer column.
+ * - page.footer_fifth: Items for the fifth footer column.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+
+
+{{ attach_library('form3/skrollr') }}
+
+<div id="skrollr-body">
+
+  <div style="background:url({{ base_path ~ directory }}/img/hometop.jpg) top center #1a1a1a;background-size:cover;">
+
+    {% include '@form3/includes/header.html.twig' %}
+
+    <div class="uk-container uk-container-large">
+      <div class="uk-section uk-flex uk-flex-middle" uk-height-viewport="offset-top: true; offset-bottom: 50px">
+        <div class="uk-inline uk-width-1-1 uk-position-relative">
+          <div class="uk-width-3-5@m uk-width-1-2@l">
+            <h2 class="front-headline" uk-scrollspy="cls:uk-animation-slide-top; repeat:true; delay:200;">
+              Free
+              <span>Training</span>
+              Videos
+            </h2>
+            <p class="front-subheading">of the world's best professional audio products</p>
+            <a class="uk-button uk-button-secondary first" href="/how-it-works">How it works</a>
+            <a class="uk-button uk-button-default uk-light second uk-animation-fade" href="https://store.mixpowertraining.com/register-product">Manufacturers: Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="uk-container">
+      <div class="uk-child-width-1-3@s uk-child-width-1-5@m uk-text-center uk-light uk-margin-bottom bn-blocks" uk-grid>
+        <div>
+          <div class="uk-card uk-card-body">
+            <h2>
+              <span class="red">100%</span>
+              Unbiased
+            </h2>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-body">
+            <h2>
+              <span>FREE</span>
+              Learning
+            </h2>
+          </div>
+        </div>
+        <div class="uk-visible@m">
+          <div class="uk-card uk-card-body">
+            <h2>
+              <span>PRO</span>
+              Gear
+            </h2>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-body">
+            <h2>
+              <span>EXPERT</span>
+              Tricks
+            </h2>
+          </div>
+        </div>
+        <div class="uk-visible@m">
+          <div class="uk-card uk-card-body">
+            <h2>
+              <span>INSTANT</span>
+              Access
+            </h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+<div class="uk-section uk-section-default uk-padding-small">
+	<h4 style="color:#000000;">For Manufacturers</h4>
+</div>
+
+  <div class="uk-background-cover" style="background:url({{ base_path ~ directory }}/img/mixdarkback.jpg) top center #1a1a1a;">
+
+    <div class="uk-container uk-container-center" uk-height-viewport>
+
+      <div class="uk-grid-divider uk-grid-small uk-child-width-1-2@m uk-child-width-expand@l uk-text-center uk-light uk-margin-large-top uk-margin-large-bottom" uk-grid>
+        <div>
+          <div class="uk-card">
+            <div class="suite-value-top"></div>
+            <div class="suite-number">
+              1
+            </div>
+            <div class="suite-value uk-flex uk-flex-bottom uk-flex-center">
+              <p>FREE</p>
+            </div>
+            <div class="suite-benefits">
+              <ul class="uk-list">
+                <li>Industry expert, unbiased product review video</li>
+              </ul>
+            </div>
+            <div class="suite-cta">
+              <a class="uk-button uk-button-default uk-width-1-1 uk-margin-large-bottom" href="https://store.mixpowertraining.com/register-product">Start Process</a>
+            </div>
+          </div>
+        </div>
+        <!-- /end .uk-card -->
+
+        <div>
+          <div class="uk-card">
+            <div class="suite-value-top"></div>
+            <div class="suite-number">
+              2
+            </div>
+            <div class="suite-value uk-flex uk-flex-bottom uk-flex-center">
+              <p>PRODUCT
+                <span>DONATION</span>
+              </p>
+            </div>
+            <div class="suite-benefits">
+              <ul class="uk-list">
+                <li>Industry expert, unbiased product review video</li>
+                <li>
+                  <span>Product installation in Mix Power Studio</span>
+                </li>
+                <li>Tier 3 Logo placement for supporting organizations</li>
+              </ul>
+            </div>
+            <div class="suite-cta">
+              <a class="uk-button uk-button-default uk-width-1-1 uk-margin-large-bottom" href="https://store.mixpowertraining.com/register-product">Start Process</a>
+            </div>
+          </div>
+        </div>
+        <!-- /end .uk-card -->
+
+        <div>
+          <div class="uk-card">
+            <div class="suite-value-top"></div>
+            <div class="suite-number">
+              3
+            </div>
+            <div class="suite-value uk-flex uk-flex-bottom uk-flex-center">
+              <p>$1500</p>
+            </div>
+            <div class="suite-benefits">
+              <ul class="uk-list">
+                <li>Industry expert, unbiased product review video</li>
+                <li>
+                  <span>Complete ecommerce integrated into video www.yourproduct.com</spn>
+                </li>
+                <li>Tier 3 Logo placement for supporting organizations</li>
+              </ul>
+            </div>
+            <div class="suite-cta">
+              <a class="uk-button uk-button-default uk-width-1-1 uk-margin-large-bottom" href="https://store.mixpowertraining.com/register-product">Start Process</a>
+            </div>
+          </div>
+        </div>
+        <!-- /end .uk-card -->
+
+        <div>
+          <div class="uk-card bestvalue uk-margin-remove">
+            <div class="suite-value-top">
+              <p>BEST VALUE</p>
+            </div>
+            <div class="suite-number">
+              4
+            </div>
+            <div class="suite-value uk-flex uk-flex-bottom uk-flex-center">
+              <p>
+                <span>$1500 +</span><br/>
+                PRODUCT
+                <span>DONATION</span>
+              </p>
+            </div>
+            <div class="suite-benefits">
+              <ul class="uk-list">
+                <li>Industry expert, unbiased product review video</li>
+                <li>
+                  <span>Complete ecommerce integrated into video www.yourproduct.com</spn>
+                </li>
+                <li>Tier 2 Logo placement for supporting organizations</li>
+                <li>
+                  <span>Product installation in Mix Power Studio</span>
+                </li>
+              </ul>
+            </div>
+            <div class="suite-cta">
+              <a class="uk-button uk-button-danger uk-width-1-1 uk-margin-large-bottom" href="https://store.mixpowertraining.com/register-product">Start Process</a>
+            </div>
+          </div>
+        </div>
+        <!-- /end .uk-card -->
+
+      </div>
+      <!-- /end .uk-grid -->
+     
+    </div>
+    <!-- /end .uk-container -->
+  </div>
+
+
+</div>
+  {% include '@form3/includes/highlights-status.html.twig' %}
+
+  {% include '@form3/includes/footer.html.twig' %}
+
+
+{% include '@form3/includes/offcanvas.html.twig' %}
+

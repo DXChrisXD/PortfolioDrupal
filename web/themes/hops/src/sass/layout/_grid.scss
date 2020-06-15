@@ -1,0 +1,58 @@
+// @file
+
+// Constrain layout
+// Provide a default max-width for the content wrappers
+
+.l-constrain {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include mappy-query(b-medium) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $l-big;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+// Reusable flex grid
+// Used for views grid display
+//
+
+.l-f-grid {
+  @include overflow-wrap;
+
+  @include mappy-query(b-medium) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .l-constrain & {
+    // Avoid gutters when grid is constrained
+    @include mappy-query(b-medium) {
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+  }
+
+  &.align-start{
+    align-items: flex-start;
+  }
+}
+
+.l-f-grid__column {
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  @for $i from 2 to 7 {
+    .l-f-grid--cols-#{$i} & {
+      @include mappy-query(b-medium) {
+        flex-basis: (1/$i)*100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: (1/$i)*100%;
+      }
+    }
+  }
+}

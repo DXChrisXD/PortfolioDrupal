@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i');
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  line-height: 1.5;
+  word-wrap: break-word;
+  font-family: "Montserrat", serif, Georgia;
+  font-size: 14px;
+  color: #333;
+}
+a,
+a.link {
+  text-decoration: none;
+  color: #ff8000;
+}
+a:hover,
+a:active,
+a:focus,
+.link:hover,
+.link:active,
+.link:focus {
+  opacity: 0.8;
+  text-decoration: none;
+  color: #ff8000;
+}
+.link {
+  text-decoration: none;
+  color: #ff8000;
+}
+h1 a,
+h2 a {
+  border-bottom: none;
+}
+
+/**
+ * Reusable heading classes are included to help modules change the styling of
+ * headings on a page without affecting accessibility.
+ */
+h1,
+.h1 {
+  margin: 15px 0 10px;
+  font-weight: 500;
+  font-size: 36px;
+  color: #000;
+}
+h2,
+.h2 {
+  margin: 15px 0 10px;
+  font-weight: 500;
+  font-size: 30px;
+}
+h3,
+.h3 {
+  margin: 15px 0 10px;
+  font-weight: 500;
+  font-size: 24px;
+}
+h4,
+.h4 {
+  margin: 15px 0 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+h5,
+.h5 {
+  margin: 15px 0 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+h6,
+.h6 {
+  margin: 15px 0 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+p {
+  margin: 0 0 1.2em;
+}
+del {
+  text-decoration: line-through;
+}
+
+/* Table */
+table {
+  width: 100%;
+}
+table h1 { margin: 10px 0 10px; }
+table h2 { margin: 10px 0 10px; }
+table h3 { margin: 10px 0 10px; }
+table h4 { margin: 10px 0 10px; }
+table h5 { margin: 10px 0 10px; }
+table h6 { margin: 10px 0 10px; }
+td { border-top: 1px solid #e6e6e6; }
+table tr:first-child td { border-top: 0px; }
+.bd-example { border: 2px solid #f7f7f9; margin-left: 0px; margin-right: 0px; }
+/* End Table */
+
+/* Block has it's own color title. */
+.block > h2 {
+  color: #ff8000 !important;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+blockquote {
+  background: #f7f7f7;
+  border-left: 3px solid #ff8000; /* LTR */
+  font-style: italic;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+[dir="rtl"] blockquote {
+  border-left: none;
+  border-right: 1px solid #bbb;
+}
+blockquote:before {
+  color: #ff8000;
+  content: "\201C";
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.2em; /* LTR */
+  vertical-align: -0.4em;
+}
+[dir="rtl"] blockquote:before {
+  content: "\201D";
+  margin-left: 0.2em;
+  margin-right: 0;
+}
+blockquote:after {
+  color: #ff8000;
+  content: "\201D";
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.45em;
+}
+[dir="rtl"] blockquote:after {
+  content: "\201C";
+}
+blockquote > p:first-child {
+  display: inline;
+}
+.feed-icon {
+  display: block;
+  margin: 25px 0 0 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ul, ol {
+  margin: 0;
+  padding: 0 0 0.25em 1em; /* LTR */
+}
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding: 0 1em 0.25em 0;
+}
+ol ol,
+ul ul {
+  margin: 0;
+  padding: 0 0 0.25em 1em; /* LTR */
+}
+[dir="rtl"] ol ol,
+[dir="rtl"] ul ul {
+  padding: 0 1em 0.25em 0;
+}
+.block ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.block li {
+  padding-left: 10px;
+  position: relative;
+}
+.block li:before {
+  position: absolute;
+  left: 0;
+  content: "\f10a";
+  font-family: "Ionicons";
+  display: inline-block;
+}
+/* Messages */
+.messages {
+  background: no-repeat 10px 17px;  /* LTR */
+  border: 1px solid;
+  border-width: 1px 1px 1px 0;  /* LTR */
+  border-radius: 2px;
+  padding: 15px 20px 15px 35px; /* LTR */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+[dir="rtl"] .messages {
+  border-width: 1px 0 1px 1px;
+  background-position: right 10px top 17px;
+  padding-left: 20px;
+  padding-right: 35px;
+  text-align: right;
+}
+
+.messages + .messages {
+  margin-top: 1.538em;
+}
+
+.messages__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.messages__item + .messages__item {
+  margin-top: 0.769em;
+}
+
+.messages--status {
+  color: #325e1c;
+  background-color: #f3faef;
+  border-color: #c9e1bd #c9e1bd #c9e1bd transparent;  /* LTR */
+  box-shadow: -8px 0 0 #77b259; /* LTR */
+}
+
+[dir="rtl"] .messages--status {
+  border-color: #c9e1bd transparent #c9e1bd #c9e1bd;
+  box-shadow: 8px 0 0 #77b259;
+  margin-left: 0;
+}
+
+.messages--warning {
+  background-color: #fdf8ed;
+  border-color: #f4daa6 #f4daa6 #f4daa6 transparent;  /* LTR */
+  color: #734c00;
+  box-shadow: -8px 0 0 #e09600; /* LTR */
+}
+
+[dir="rtl"] .messages--warning {
+  border-color: #f4daa6 transparent #f4daa6 #f4daa6;
+  box-shadow: 8px 0 0 #e09600;
+}
+
+.messages--error {
+  background-color: #fcf4f2;
+  color: #a51b00;
+  border-color: #f9c9bf #f9c9bf #f9c9bf transparent;  /* LTR */
+  box-shadow: -8px 0 0 #e62600; /* LTR */
+}
+
+[dir="rtl"] .messages--error {
+  border-color: #f9c9bf transparent #f9c9bf #f9c9bf;
+  box-shadow: 8px 0 0 #e62600;
+}
+
+.messages--error p.error {
+  color: #a51b00;
+}
+/* End Messages*/
+
+
+/* Buttons */
+input[type="submit"] {
+  background-color: #ff8000;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+}
+
+input[type="submit"]:hover {
+  background-color: #cc6600;
+  transition: 0.3s;
+}
+/* End Buttons */
+
+/* Placeholders */
+input::-webkit-input-placeholder {
+    color: #999;
+}
+input:-moz-placeholder {
+   color: #999;
+   opacity:  1;
+}
+input::-moz-placeholder {
+   color: #999;
+   opacity:  1;
+}
+input:-ms-input-placeholder {
+   color: #999;
+}
+input::-ms-input-placeholder {
+   color: #999;
+}
+
+input::placeholder {
+   color: #999;
+}
+/* End Placeholders */

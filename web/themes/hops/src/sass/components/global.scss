@@ -1,0 +1,12 @@
+// @file
+// Global components
+// All frequently used components across the app
+
+// Import abstracts
+@import '../abstracts/abstracts';
+
+// Sass globbing will import partials from subfolders in alphabetical order
+// Note gulp sass build task should group media querries at the end of each generated file
+// Dissociating components in at least 3 files (system, global, components) and
+// forcing load order ensure overrides are respected after build task.
+@import "global/**/*.scss";

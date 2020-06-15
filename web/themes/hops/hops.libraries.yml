@@ -1,0 +1,41 @@
+base:
+  header: false
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/modernizr
+    - hops/orientationchange
+
+  css:
+    base:
+      dist/css/base/base.css: {}
+    layout:
+      dist/css/layout/layout.css: {}
+    component:
+      dist/css/components/system.css: {}
+      dist/css/components/global.css: {}
+      dist/css/components/components.css: {}
+    state:
+      dist/css/state/state.css: {}
+    theme:
+      dist/css/theme/theme.css: {}
+
+# Waiting for Best pratices for handling external libraries to be defined
+# @see https://www.drupal.org/project/documentation/issues/2605130
+a11y-toggle:
+  version: 2.1.0
+  js:
+    https://cdn.jsdelivr.net/npm/a11y-toggle@2.1.0/a11y-toggle.min.js: { type: external, minified: true }
+
+orientationchange:
+  version: 1.x
+  js:
+    dist/js/lib/orientationchange/ios-orientationchange-fix.js: {}
+
+submenu:
+  version: 1.x
+  js:
+    dist/js/submenu.js: {}

@@ -1,0 +1,13 @@
+// Buttons
+
+.button {
+  @include button--default;
+}
+
+.button--primary {
+  @include button--primary;
+}
+
+.button--wide {
+  width: 100%;
+}

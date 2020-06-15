@@ -1,0 +1,35 @@
+// Define custom layout values
+//
+
+// Values for the container max-width at specific media queries breakpoint
+// @example
+// max-width: $l-medium;
+$l-small: 100%;
+$l-medium: 90%;
+$l-big: rem(1278);
+
+// Values for default media queries breakpoints
+// Used for mappy-bp $breakpoints map
+$b-small-val: 480px;
+$b-medium-val: 769px;
+$b-big-val: 1350px;
+
+// Define Mappy-bp values
+//
+
+// mappy-bp breakpoints settings used in $mappy-queries map
+$breakpoints: (
+  'small': $b-small-val,
+  'medium': $b-medium-val,
+  'big': $b-big-val,
+);
+
+// mappy-bp settings
+// @examples
+// @include mappy-query(b-medium) {}
+// @include mappy-bp(max-width $b-medium-val) {}
+$mappy-queries: (
+  'b-small': mappy-bp(small, $type: screen),
+  'b-medium': mappy-bp(medium, $type: screen),
+  'b-big': mappy-bp(big, $type: screen),
+);

@@ -1,0 +1,42 @@
+name: Dopetrope by HTML5UP
+type: theme
+description: A design by AJ from HTML5UP
+# core: 8.x
+
+# Defines the base theme
+base theme: stable
+
+# Defines libraries group in which we can add css/js
+libraries:
+  - dopetrope/global-styling
+  - dopetrope/global-scripts
+
+dependencies:
+  - core/jquery
+
+# all regions defined here are default regions
+# Regions
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  site_name: 'Site Name'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: 'Highlighted'
+  header_buttons: 'Header Buttons'
+  featured_top: 'Featured top'
+  breadcrumb: Breadcrumb
+  content: Content
+  featured_blogs: 'Featured Blogs'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer_fifth: 'Footer fifth'
+  footer_sixth: 'Footer Sixth'
+# Information added by Drupal.org packaging script on 2019-02-20
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'dopetrope'
+datestamp: 1550669003

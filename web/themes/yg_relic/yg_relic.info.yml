@@ -1,0 +1,29 @@
+name: Yg Relic
+base theme: classy
+type: theme
+description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
+# core: 8.x
+screenshot : yg_relic.png
+
+regions:
+  logo: Logo
+  status_message: Status Message
+  primary_menu: Primary menu
+  banner: Banner
+  bread_crumb: breadcrumb
+  edit: Content edit
+  content: Content
+  slider: Slider
+  footer_col_1: footer first
+  footer_col_2: footer second
+  footer_col_3: footer third
+  
+libraries:
+  - yg_relic/global-styling
+  
+
+# Information added by Drupal.org packaging script on 2018-11-09
+version: '8.x-1.0'
+core: '8.x'
+project: 'yg_relic'
+datestamp: 1541757809

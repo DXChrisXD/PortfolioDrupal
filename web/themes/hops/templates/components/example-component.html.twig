@@ -1,0 +1,7 @@
+{% include '@molecules/example-component/example-component.twig' with  {
+    title: title|render|striptags|trim|raw,
+    text: text,
+    image: image,
+    modifier: variant,
+  }
+%}

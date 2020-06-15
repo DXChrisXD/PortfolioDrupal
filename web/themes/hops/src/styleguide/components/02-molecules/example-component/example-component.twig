@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Example pattern.
+ */
+#}
+{% set modifier = modifier ? ['example-component--' ~ modifier] : [] %}
+{% set classes = { 'class' : 'example-component' }|merge(modifier) %}
+<article class="{{ classes|join(' ') }}">
+  {% if title %}
+  <h1 class="example-component__title">{{ title }}</h1>
+  {% endif %}
+  {% if text %}
+  <div class="example-component__text">
+  {{ text }}
+  </div>
+  {% endif %}
+  {% if image %}
+  <div class="example-component__image">
+  {{ image }}
+  </div>
+  {% endif %}
+</article>

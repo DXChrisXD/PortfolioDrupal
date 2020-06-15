@@ -1,0 +1,31 @@
+uuid: d94d4402-0903-4a33-90ac-4612f780169c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_se
+    - node.type.habilidades
+    - node.type.regular
+    - node.type.trabajos_destacados
+id: node.trabajos_destacados.field_se
+field_name: field_se
+entity_type: node
+bundle: trabajos_destacados
+label: 'Seguir >>'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      trabajos_destacados: trabajos_destacados
+      habilidades: habilidades
+      regular: regular
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: trabajos_destacados
+field_type: entity_reference

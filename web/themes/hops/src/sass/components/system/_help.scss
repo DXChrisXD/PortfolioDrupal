@@ -1,0 +1,15 @@
+// More Help
+
+.icon-help {
+  padding-left: rem(24px);
+  position: relative;
+
+  &:before {
+    background: url(../../images/core/help.svg) no-repeat center;
+    @include el(block, 16px, 16px);
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

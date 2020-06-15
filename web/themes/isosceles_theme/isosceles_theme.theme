@@ -1,0 +1,100 @@
+<?php
+
+/**
+ * Preprocess variables for page template.
+ */
+function isosceles_theme_preprocess_page(&$variables) {
+
+  //Add classes to sticky and static menu
+  if (theme_get_setting('sticky_header'))
+    $variables['sticky_header'] = 'static-header';
+  else {
+    $variables['sticky_on'] = 'sticky-on';
+    $variables['sticky_header'] = 'sticky-header';
+  }
+
+  // Add classes to sidebar_first, content and sidebar_second regions
+  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+    $variables['sidebar_first_class'] = 'col-md-3';
+    $variables['content_class'] = 'col-md-6';
+    $variables['sidebar_second_class'] = 'col-md-3';
+  }
+  elseif (!empty($variables['page']['sidebar_first'])) {
+    $variables['sidebar_first_class'] = 'col-md-3';
+    $variables['content_class'] = 'col-md-9';
+  }
+  elseif (!empty($variables['page']['sidebar_second'])) {
+    $variables['content_class'] = 'col-md-9';
+    $variables['sidebar_second_class'] = 'col-md-3';
+  }
+  else {
+    $variables['content_class'] = 'col-md-12';
+  }
+
+  // Add classes to top content regions
+  if (!empty($variables['page']['top_content_first']) && !empty($variables['page']['top_content_second']) && !empty($variables['page']['top_content_third']) && !empty($variables['page']['top_content_fourth'])) {
+    $variables['top_content_class'] = 'col-md-3';
+  }
+  elseif ((!empty($variables['page']['top_content_first']) && !empty($variables['page']['top_content_second']) && !empty($variables['page']['top_content_third'])) || (!empty($variables['page']['top_content_first']) && !empty($variables['page']['top_content_second']) && !empty($variables['page']['top_content_fourth'])) || (!empty($variables['page']['top_content_first']) && !empty($variables['page']['top_content_third']) && !empty($variables['page']['top_content_fourth'])) || (!empty($variables['page']['top_content_second']) && !empty($variables['page']['top_content_third']) && !empty($variables['page']['top_content_fourth']))) {
+    $variables['top_content_class'] = 'col-md-4';
+  }
+  elseif ((!empty($variables['page']['top_content_first']) && !empty($variables['page']['top_content_second'])) || (!empty($variables['page']['top_content_first']) && !empty($variables['page']['top_content_third'])) || (!empty($variables['page']['top_content_first']) && !empty($variables['page']['top_content_fourth'])) || (!empty($variables['page']['top_content_second']) && !empty($variables['page']['top_content_third'])) || (!empty($variables['page']['top_content_second']) && !empty($variables['page']['top_content_fourth'])) || (!empty($variables['page']['top_content_third']) && !empty($variables['page']['top_content_fourth']))) {
+    $variables['top_content_class'] = 'col-md-6';
+  }
+  else {
+    $variables['top_content_class'] = 'col-md-12';
+  }
+
+
+  // Add classes to bottom content regions
+  if (!empty($variables['page']['bottom_content_first']) && !empty($variables['page']['bottom_content_second']) && !empty($variables['page']['bottom_content_third'])) {
+    $variables['bottom_content_class'] = 'col-md-4';
+  }
+  elseif ((!empty($variables['page']['bottom_content_first']) && !empty($variables['page']['bottom_content_second'])) || (!empty($variables['page']['bottom_content_first']) && !empty($variables['page']['bottom_content_third'])) || (!empty($variables['page']['bottom_content_second']) && !empty($variables['page']['bottom_content_third']))) {
+    $variables['bottom_content_class'] = 'col-md-6';
+  }
+  else {
+    $variables['bottom_content_class'] = 'col-md-12';
+  }
+
+  // Add classes to bottom regions
+  if (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_second']) && !empty($variables['page']['bottom_third']) && !empty($variables['page']['bottom_fourth'])) {
+    $variables['bottom_class'] = 'col-md-3';
+  }
+  elseif ((!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_second']) && !empty($variables['page']['bottom_third'])) || (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_second']) && !empty($variables['page']['bottom_fourth'])) || (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_third']) && !empty($variables['page']['bottom_fourth'])) || (!empty($variables['page']['bottom_second']) && !empty($variables['page']['bottom_third']) && !empty($variables['page']['bottom_fourth']))) {
+    $variables['bottom_class'] = 'col-md-4';
+  }
+  elseif ((!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_second'])) || (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_third'])) || (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_fourth'])) || (!empty($variables['page']['bottom_second']) && !empty($variables['page']['bottom_third'])) || (!empty($variables['page']['bottom_second']) && !empty($variables['page']['bottom_fourth'])) || (!empty($variables['page']['bottom_third']) && !empty($variables['page']['bottom_fourth']))) {
+    $variables['bottom_class'] = 'col-md-6';
+  }
+  else {
+    $variables['bottom_class'] = 'col-md-12';
+  }
+
+  // Add classes to footer regions
+  if (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_second']) && !empty($variables['page']['footer_third'])) {
+    $variables['footer_class'] = 'col-md-4';
+  }
+  elseif ((!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_second'])) || (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_third'])) || (!empty($variables['page']['footer_second']) && !empty($variables['page']['footer_third']))) {
+    $variables['footer_class'] = 'col-md-6';
+  }
+  else {
+    $variables['footer_class'] = 'col-md-12';
+  }
+
+}
+
+function isosceles_theme_form_search_block_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['keys']['#attributes']['placeholder'] = t('Search');
+}
+
+//display route in breadcrumb region
+function isosceles_theme_preprocess_breadcrumb(&$variables){
+  $request = \Drupal::request();
+  if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+    $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+    $variables['breadcrumb'][] = array(
+        'text' => $title,
+    );
+  }
+}

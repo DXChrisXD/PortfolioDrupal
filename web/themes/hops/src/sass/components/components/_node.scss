@@ -1,0 +1,12 @@
+// Node.
+
+[class*=--unpublished] {
+  opacity: .5;
+
+  &:before {
+    @include el(inline-block, 100%, rem(32));
+    border-radius: 3px;
+    margin-bottom: rhythm(1);
+    @include stripes(yellow, $black, -45deg);
+  }
+}

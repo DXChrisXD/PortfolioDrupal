@@ -1,0 +1,40 @@
+uuid: bb2a8c4f-c193-4a07-8e2b-770326e9cb96
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.habilidades.body
+    - field.field.node.habilidades.field_a
+    - field.field.node.habilidades.field_descripcion2
+    - field.field.node.habilidades.field_iconos
+    - field.field.node.habilidades.field_imagen_h
+    - field.field.node.habilidades.field_seguir_h
+    - node.type.habilidades
+  module:
+    - text
+    - user
+id: node.habilidades.teaser
+targetEntityType: node
+bundle: habilidades
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_a: true
+  field_descripcion2: true
+  field_iconos: true
+  field_imagen_h: true
+  field_seguir_h: true

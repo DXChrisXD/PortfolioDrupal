@@ -1,0 +1,33 @@
+bootstrap-cdn:
+  version: 3.3.7
+  remote: //maxcdn.bootstrapcdn.com/bootstrap/3.3.7
+  css:
+    base:
+      //maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css: { weight: -1 }
+  js:
+    //maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js: {}
+  license:
+    name: The MIT License (MIT)
+    url: //github.com/twbs/bootstrap/blob/master/LICENSE
+    gpl-compatible: true
+  dependencies:
+    - core/jquery
+
+global-components:
+  Version: 1.x
+  css:
+    theme:
+      css/base.css: {}
+      css/custom.css: {}
+      css/colors.css: {}
+      css/ionicons.css: {}
+      css/style.css: {}
+      css/responsive.css: {}
+  js:
+    js/isosceles_theme.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

@@ -1,0 +1,34 @@
+//
+// Helper classes
+//
+
+// Hide for desktop
+//
+.desktop-hidden {
+  @include mappy-query(b-medium) {
+    display: none;
+  }
+}
+
+// Hide for mobile
+//
+.mobile-hidden {
+  @include mappy-bp(max-width $b-small-val) {
+    display: none;
+  }
+}
+
+// Inline lists
+//
+.list-inline {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+
+  > li {
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+  }
+}

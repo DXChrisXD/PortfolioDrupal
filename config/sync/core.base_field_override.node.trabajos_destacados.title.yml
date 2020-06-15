@@ -1,0 +1,18 @@
+uuid: f6f5acbb-0cbf-4f63-b0c1-5afd21122c45
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.trabajos_destacados
+id: node.trabajos_destacados.title
+field_name: title
+entity_type: node
+bundle: trabajos_destacados
+label: titulo
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,35 @@
+// @file
+// Styleguide purpose styles
+
+// Import abstracts
+@import 'abstracts/abstracts';
+
+.site-container{
+  // Avoid collapsing margins
+  display:inline-block;
+  margin:0;
+  width:100%;
+}
+
+.l-f-grid__column {
+  border: 1px solid $black;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+// Set colors for styleguide
+$brand-colors: primary $brand-primary,
+              secondary $brand-secondary;
+
+@each $brand-color in $brand-colors {
+  .brand-color-#{nth($brand-color, 1)}{
+    background-color: nth($brand-color, 2);
+  }
+}
+
+.brand-color{
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}

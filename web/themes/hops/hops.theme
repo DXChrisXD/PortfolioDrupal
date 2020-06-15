@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Theme hooks for Hops.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Include all files from the includes directory.
+ */
+$includes_path = dirname(__FILE__) . '/includes/*.inc';
+foreach (glob($includes_path) as $filename) {
+  require_once dirname(__FILE__) . '/includes/' . basename($filename);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Add advanced theme settings to the Hops theme.
+ */
+function hops_form_system_theme_settings_alter(&$form, FormStateInterface &$form_state, $form_id = NULL) {
+  $styleguide_path = base_path() . drupal_get_path('theme', 'hops') . '/dist/styleguide/index.html';
+  $styleguide_root = DRUPAL_ROOT . $styleguide_path;
+  $styleguide_exists = file_exists($styleguide_root);
+
+  if ($styleguide_exists) {
+    $form['hops_styleguide'] = [
+      '#title'         => '&#9733; ' . t('Styleguide'),
+      '#description' => t('View the <a href="@link">living style guide</a> generated from the theme.', ['@link' => $styleguide_path]),
+      '#type'          => 'fieldset',
+      '#collapsible' => FALSE,
+      '#collapsed' => FALSE,
+      '#weight' => -20,
+    ];
+  }
+
+  // Cool Stuff.
+  $form['stuff'] = [
+    '#type'          => 'fieldset',
+    '#title'         => '&#9996; ' . t('Stuff'),
+    '#description'   => '',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+    '#weight' => -17,
+  ];
+
+  $form['stuff']['meta_theme_color'] = [
+    '#type'          => 'textfield',
+    '#title'         => t('Theme color meta tag'),
+    '#attributes'   => ['placeholder' => ['#ccc']],
+    '#description'   => t('Use the <a href="@link">theme-color</a> meta tag to set the toolbar color (starting in version 39 of Chrome for Android on Lollipop)', ['@link' => 'http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android']),
+    '#default_value' => theme_get_setting('meta_theme_color'),
+  ];
+}

@@ -1,0 +1,17 @@
+
+	<hr class="fh5co-spacer fh5co-spacer-sm">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-md-5">
+				<h2>{{ content.field_about_content_title.0 }}</h2>
+				{{ content.field_about_content_body.0 }}
+			</div>
+			<div class="col-md-6 col-md-push-1">
+				<figure class="fh5co-with-caption">
+					<img src="{{file_url(content.field_about_content_image['#items'].entity.uri.value)}}" alt="Image" class="img-responsive">
+					<figcaption>{{content.field_about_content_image['#items'].title}}</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>

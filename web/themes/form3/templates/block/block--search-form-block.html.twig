@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * uikit3's theme implementation for a search form block. Extends Classy's
+ * search form block template.
+ *
+ * Available variables:
+ * - content: The content of this block.
+ * - content_attributes: A list of HTML attributes applied to the main content
+ *   tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ * @see search_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'block',
+    'block-search',
+    'container-inline',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <div{{ title_attributes.addClass( 'uk-nav-header' ) }}>{{ label }}</div>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+  <div{{ content_attributes.addClass('uikitty-search', 'uk-nav') }}>
+    {{ content }}
+  </div>
+  {% endblock %}
+</div>

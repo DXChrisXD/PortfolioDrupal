@@ -1,0 +1,11 @@
+// @file
+// CK editor styling
+
+// Import abstracts
+@import '../abstracts/abstracts';
+
+body {
+  background: $page-color;
+  padding-left: rhythm(1/3);
+  padding-right: rhythm(1/3);
+}

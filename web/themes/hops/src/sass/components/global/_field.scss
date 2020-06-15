@@ -1,0 +1,31 @@
+// Field
+
+// .field {}
+// .field__items {}
+// .field__item {}
+
+.field__label {
+  font-weight: bold;
+}
+
+.field--inline {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: rhythm(1/2);
+  margin-top: rhythm(1);
+
+  .field__label,
+  > .field__item {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .field__label {
+    padding-right: 1em;
+    flex: 0 0 auto;
+  }
+
+  > .field__item {
+    flex: 1 1 auto;
+  }
+}

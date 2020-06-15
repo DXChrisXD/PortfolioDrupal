@@ -1,0 +1,15 @@
+uuid: c3a75e1f-f8fd-44da-904b-2dc856d4a85a
+langcode: en
+status: true
+dependencies: {  }
+name: countash
+label: Countash
+effects:
+  b074f324-65cd-4fc1-9357-9e24b5f941f5:
+    uuid: b074f324-65cd-4fc1-9357-9e24b5f941f5
+    id: image_scale
+    weight: 1
+    data:
+      width: 1100
+      height: 400
+      upscale: false

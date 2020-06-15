@@ -1,0 +1,43 @@
+// Forms
+
+// Text format
+.text-format-wrapper {
+  .filter-wrapper {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  textarea {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 100%;
+  }
+}
+
+.form-item-text-format-value {
+  margin-bottom: 0;
+}
+
+
+.filter-help,
+.filter-guidelines {
+  font-size: $font-size-md;
+}
+
+details {
+  border-radius: 3px;
+  border:1px solid $form-border-color;
+  margin: rhythm(1/2) 0 rhythm(1);
+  padding: rhythm(1/2) 1em;
+  position: relative;
+}
+
+.detail__summary {
+  cursor: pointer;
+  outline: none;
+}
+
+.detail__description {
+  font-style: italic;
+  margin-top: 0;
+}

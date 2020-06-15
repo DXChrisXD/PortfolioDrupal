@@ -1,0 +1,52 @@
+// Drupal Messages
+//
+
+.messages {
+  background-repeat: no-repeat;
+  @include border-right-radius(3px);
+  border-left: 4px solid;
+  margin: rhythm(1) 0;
+  padding: rhythm(1/2) rem(20) rhythm(1/2) rem(50);
+  position: relative;
+  word-wrap: break-word;
+
+  em {
+    color: $black;
+  }
+
+  @media print {
+    background-image: none !important;
+    padding-left: rhythm(1/2);
+  }
+}
+
+.messages__title {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+.messages--error {
+  background: $error-color-light url(../../images/icons/icn-error.svg) no-repeat rem(16) rhythm(2/3);
+  border-color: $error-color;
+  color: $error-color-dark;
+}
+
+.messages--status {
+  background: $status-color-light url(../../images/icons/icn-status.svg) no-repeat rem(16) rhythm(2/3);
+  border-color: $status-color;
+  color: $status-color-dark;
+}
+
+.messages--warning {
+  background: $warning-color-light url(../../images/icons/icn-warning.svg) no-repeat rem(16) rhythm(2/3);
+  border-color: $warning-color;
+  color: $warning-color-dark;
+}
+
+.messages__list {
+  margin-bottom: 0;
+}

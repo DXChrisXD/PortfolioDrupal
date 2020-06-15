@@ -1,0 +1,40 @@
+// Pager
+//
+
+.pager {
+  clear: both;
+}
+
+.pager__items {
+  padding: 0;
+  list-style: none;
+}
+
+.pager__item {
+  @include mappy-query(b-medium) {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  a {
+    display: block;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 2px solid $link-hover-color;
+    }
+
+    @include mappy-query(b-medium) {
+      padding: 0 rem(5);
+    }
+  }
+
+  &.is-active {
+    a {
+      border-bottom: 2px solid $link-hover-color;
+      color: $link-hover-color;
+      text-decoration: none;
+    }
+  }
+}

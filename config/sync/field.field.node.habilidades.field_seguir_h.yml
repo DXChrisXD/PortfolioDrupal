@@ -1,0 +1,31 @@
+uuid: 145a9a69-cc6a-4f43-8f07-29f803a40bba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seguir_h
+    - node.type.habilidades
+    - node.type.regular
+    - node.type.trabajos_destacados
+id: node.habilidades.field_seguir_h
+field_name: field_seguir_h
+entity_type: node
+bundle: habilidades
+label: 'Seguir >>'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      trabajos_destacados: trabajos_destacados
+      habilidades: habilidades
+      regular: regular
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: habilidades
+field_type: entity_reference

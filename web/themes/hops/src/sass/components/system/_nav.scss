@@ -1,0 +1,121 @@
+// Styles for the navigation lists
+
+.nav {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+// Extendable inline nav style.
+%nav--inline {
+  & > .nav__item {
+    display: inline-block;
+    white-space: nowrap;
+  }
+}
+
+// Extendable pillbox nav style.
+%nav--pillbox {
+  @include clearfix;
+  display: inline-block;
+  line-height: 0;
+
+  .nav__item {
+    display: block;
+    float: left;
+    margin: 0;
+
+    & + .nav__item a {
+      border-left: none;
+    }
+  }
+
+  a {
+    background-color: $tabs-bg-color;
+    border: 1px solid $tabs-border-color;
+    color: $tabs-text-color;
+    display: block;
+    line-height: 1.1;
+    margin: 0;
+    padding: rem(8);
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      background-color: darken($tabs-bg-color, 8%);
+    }
+
+    &:focus {
+      color: $link-color;
+      outline: 0;
+    }
+  }
+
+  .is-active > a {
+    background-color: $link-color;
+    border-color: $link-color;
+    color: $white;
+    cursor: default;
+  }
+
+  > .nav__item:first-child > a {
+    @include border-top-radius(3px);
+    @include border-right-radius(0);
+    @include border-left-radius(3px);
+  }
+
+  > .nav__item:last-child > a {
+    @include border-bottom-radius(3px);
+    @include border-left-radius(0);
+    @include border-right-radius(3px);
+  }
+}
+
+// Extendable tabs style.
+%nav--tabs {
+  @include clearfix;
+  margin-bottom: rhythm(1);
+  margin-top: rhythm(1);
+
+  @include mappy-query(b-medium) {
+    border-bottom: 1px solid $tabs-border-color;
+  }
+
+  .nav__item {
+    display: block;
+    float: left;
+    margin: 0 rem(2) -1px;
+  }
+
+  .is-active {
+    a {
+      background-color: $page-color;
+      border: 1px solid $tabs-border-color;
+      color: $secondary-text-color;
+      cursor: default;
+
+      @include mappy-query(b-medium) {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: $page-color;
+      }
+    }
+  }
+
+  a {
+    border-radius: 5px;
+    display: block;
+    padding: rem(6) rem(12);
+    text-decoration: none;
+
+    @include mappy-query(b-medium) {
+      @include border-bottom-radius(0);
+    }
+
+    &:hover {
+      background-color: $tabs-bg-hover-color;
+    }
+  }
+}

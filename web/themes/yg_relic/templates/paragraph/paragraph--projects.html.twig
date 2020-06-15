@@ -1,0 +1,17 @@
+	<!-- row -->
+	<div class="row">
+		<div class="fh5co-spacer fh5co-spacer-md"></div>
+		<div class="col-md-3">
+			<h2 class="fh5co-heading-with-border">{{ content.field_project_title.0 }} <span class="fh5co-border"></span> 
+			</h2>
+			{{ content.field_project_content.0 }}
+			<p>{{ content.field_project_link.0 }}</p>
+		</div>
+		<div class="col-md-9 col-md-push-1">
+			<figure class="fh5co-with-caption">
+				<img src="{{file_url(content.field_project_image['#items'].entity.uri.value)}}" alt="Image" class="img-responsive">
+			</figure>
+		</div>
+		<div class="fh5co-spacer fh5co-spacer-md"></div>
+	</div>
+	<!-- row -->

@@ -1,0 +1,55 @@
+uuid: ca14a371-f81f-4473-b84e-e6fd6ca84c9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.regular.body
+    - field.field.node.regular.field__atras
+    - field.field.node.regular.field_imagen
+    - field.field.node.regular.field_seguir_
+    - node.type.regular
+  module:
+    - image
+    - text
+    - user
+id: node.regular.teaser
+targetEntityType: node
+bundle: regular
+mode: teaser
+content:
+  body:
+    label: visually_hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field__atras:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_imagen:
+    type: image
+    weight: 0
+    region: content
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_seguir_:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  links: true

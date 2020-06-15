@@ -1,0 +1,129 @@
+uuid: 7b94f2ef-451b-45f2-b4c6-ffcdc1bad8c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.trabajos_destacados.body
+    - field.field.node.trabajos_destacados.field_atras_trabajos
+    - field.field.node.trabajos_destacados.field_imagen1
+    - field.field.node.trabajos_destacados.field_imagen2
+    - field.field.node.trabajos_destacados.field_imagen3
+    - field.field.node.trabajos_destacados.field_imagen4
+    - field.field.node.trabajos_destacados.field_portada
+    - field.field.node.trabajos_destacados.field_se
+    - field.field.node.trabajos_destacados.field_titulo1
+    - field.field.node.trabajos_destacados.field_titulo2
+    - field.field.node.trabajos_destacados.field_titulo3_trabajos
+    - field.field.node.trabajos_destacados.field_titulo4
+    - node.type.trabajos_destacados
+  module:
+    - image
+    - text
+    - user
+id: node.trabajos_destacados.default
+targetEntityType: node
+bundle: trabajos_destacados
+mode: default
+content:
+  body:
+    label: visually_hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_atras_trabajos:
+    weight: 10
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_imagen1:
+    weight: 3
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_imagen2:
+    weight: 5
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_imagen3:
+    weight: 7
+    label: visually_hidden
+    settings:
+      image_style: countash
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_imagen4:
+    weight: 9
+    label: visually_hidden
+    settings:
+      image_style: mobile
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_portada:
+    weight: 0
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_se:
+    weight: 11
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_titulo1:
+    weight: 2
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_titulo2:
+    weight: 4
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_titulo3_trabajos:
+    weight: 6
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_titulo4:
+    weight: 8
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  links: true

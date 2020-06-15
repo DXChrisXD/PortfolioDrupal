@@ -1,0 +1,15 @@
+uuid: c02e10cb-f102-43c9-89f1-014313c87a78
+langcode: en
+status: true
+dependencies: {  }
+name: iconos
+label: iconos
+effects:
+  fcc0d1e8-431c-4bc5-b2a8-0c46744608e3:
+    uuid: fcc0d1e8-431c-4bc5-b2a8-0c46744608e3
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      upscale: false

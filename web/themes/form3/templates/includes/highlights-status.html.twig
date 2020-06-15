@@ -1,0 +1,16 @@
+{% if page.highlighted %}
+  <div class="uk-container uk-container-center">
+    <div class="highlighted">
+      <aside class="layout-container section clearfix" role="complementary">
+        {{ page.highlighted }}
+      </aside>
+    </div>
+  </div>
+{% endif %}
+{% if page.featured_top %}
+  <div class="featured-top">
+    <aside class="featured-top__inner section layout-container clearfix" role="complementary">
+      {{ page.featured_top }}
+    </aside>
+  </div>
+{% endif %}

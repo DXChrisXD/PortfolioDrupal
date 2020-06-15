@@ -1,0 +1,29 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% block content %}
+<div class="brandsocial">
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo uk-logo">
+      <img src="/{{ base_path ~ directory }}/logo.svg" alt="{{ 'Home'|t }}" />
+    </a>
+  {% endif %}
+  <div class="uk-grid-collapse uk-child-width-expand uk-text-center socialbar" uk-grid>
+  	<div class="arc-social-link"><a href="https://www.drupal.org/user/39972"><img src="/themes/form3/img/icons/drupal.png" /></a></div>
+  	<div class="arc-social-link"><a href="https://twitter.com/mixpowerstudio"><img src="/themes/form3/img/icons/twitter.png" /></a></div>
+  	<div class="arc-social-link"><a href="https://github.com/qodeone"><img src="/themes/form3/img/icons/github.png" /></a></div>
+  </div>
+</div>
+{% endblock %}

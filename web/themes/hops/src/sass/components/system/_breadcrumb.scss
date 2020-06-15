@@ -1,0 +1,23 @@
+// Breadcrumb
+
+.breadcrumb {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: rem(5) rem(10);
+}
+
+.breadcrumb__list {
+  margin-bottom: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.breadcrumb__item {
+  display: inline-block;
+
+  + .breadcrumb__item:before {
+    content: "\003e";
+    color: $gray25;
+    display: inline-block;
+  }
+}

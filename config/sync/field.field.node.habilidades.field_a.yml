@@ -1,0 +1,31 @@
+uuid: 4b0e92a9-40d0-475a-a2a5-bc1af0233a17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_a
+    - node.type.habilidades
+    - node.type.regular
+    - node.type.trabajos_destacados
+id: node.habilidades.field_a
+field_name: field_a
+entity_type: node
+bundle: habilidades
+label: '<< Atras'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      trabajos_destacados: trabajos_destacados
+      habilidades: habilidades
+      regular: regular
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: trabajos_destacados
+field_type: entity_reference
